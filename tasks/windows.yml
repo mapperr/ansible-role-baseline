@@ -1,0 +1,9 @@
+---
+- name: Ensure chocolatey is installed
+  win_shell: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  args:
+    creates: C:\ProgramData\chocolatey\choco.exe
+
+- name: Ensure timezone is set to Central European Standard Time
+  win_timezone:
+    timezone: "Central European Standard Time"

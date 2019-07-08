@@ -1,0 +1,21 @@
+---
+- name: Ensure basic packages are installed
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - cron
+      - screen
+      - vim
+      - curl
+      - wget
+      - rsync
+      - python-apt
+      - python-pip
+      - software-properties-common
+  become: yes
+
+- name: Ensure timezone is set to Europe/Rome
+  timezone:
+    name: "Europe/Rome"
+

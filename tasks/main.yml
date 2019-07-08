@@ -1,2 +1,11 @@
 ---
-# tasks file for common
+- include: windows.yml
+  when: "'windows' in group_names"
+  tags:
+    - common
+
+- include: linux.yml
+  when: "'linux' in group_names"
+  become: yes
+  tags:
+    - common
