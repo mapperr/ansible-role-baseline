@@ -15,7 +15,7 @@
       - software-properties-common
   become: yes
 
-- name: Ensure timezone is set to Europe/Rome
+- name: Ensure timezone is set
   timezone:
-    name: "Europe/Rome"
+    name: "{{ BASELINE_TIMEZONE_LINUX }}"
 

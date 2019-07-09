@@ -1,2 +1,4 @@
 ---
 # defaults file for common
+BASELINE_TIMEZONE_LINUX: "Europe/Rome"
+BASELINE_TIMEZONE_WINDOWS: "Central European Standard Time"

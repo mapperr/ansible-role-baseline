@@ -4,6 +4,6 @@
   args:
     creates: C:\ProgramData\chocolatey\choco.exe
 
-- name: Ensure timezone is set to Central European Standard Time
+- name: Ensure timezone is set
   win_timezone:
-    timezone: "Central European Standard Time"
+    timezone: "{{ BASELINE_TIMEZONE_WINDOWS }}"
